@@ -45,4 +45,7 @@ public class Calculator {
         Scanner scanner = new Scanner(System.in);
         return scanner.nextDouble();
     }
+    private static void calculate(){
+
+    }
 }
