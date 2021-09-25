@@ -19,10 +19,6 @@ public class BookStore {
             else z--;
         }
         System.out.println("Картотека заполнена!");
-//        for (int z = 0; z < Booklist.length; z++) {
-//            System.out.printf("Книга №%d: название: %s, год издания: %dг., цена - %dusd", z+1, Booklist[z].name, Booklist[z].year, Booklist[z].price);
-//            System.out.println();
-//        }
         Book.showBooks(Booklist);
     }
 }
