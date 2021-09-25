@@ -1,4 +1,6 @@
-package BookStorage;
+package BookStore;
+
+import org.jetbrains.annotations.NotNull;
 
 import java.util.Scanner;
 
@@ -7,7 +9,7 @@ public class Book {
     private int price;
     private int year;
 
-    protected boolean Book1Book2(Book booke){
+    protected boolean Book1Book2(@NotNull Book booke){
         if (this.name.equals(booke.name) &&
         this.year == booke.year &&
         this.price == booke.price) return true;
