@@ -16,7 +16,10 @@ public class BookStore {
                 inBooklist = false;
             }
             if (!inBooklist) Booklist[z] = newBook;
-            else z--;
+            else {
+                z--;
+                System.out.println("Данная книга уже присутствует в картотеке");
+            }
         }
         System.out.println("Картотека заполнена!");
         Book.showBooks(Booklist);
