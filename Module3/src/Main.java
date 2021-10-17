@@ -1,0 +1,17 @@
+public class Main {
+    public static void main(String[] args) {
+        // At (0;0) fuel=100
+        Tank justTank = new Tank();
+        // At (10;20) fuel=100
+        Tank anywareTank = new Tank(20, 0);
+        // At (20;30) fuel=200
+        Tank customTank = new Tank(20, 30, 150);
+        justTank.goBackward(200);
+        justTank.printPosition();
+        anywareTank.goBackward(-200);
+        anywareTank.printPosition();
+        customTank.goBackward(201);
+        customTank.printPosition();
+        //System.out.println(int);
+    }
+}
