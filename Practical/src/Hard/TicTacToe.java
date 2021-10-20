@@ -57,14 +57,14 @@ public class TicTacToe {
         for (int i = 0; i < field.length; i++) {
             for (int z = 0; z < field[i].length; z++) {
                 if (field[i][z].equals("X") && !field[i][z].equals("-")) counterX++;
-                if (field[i][z].equals("O") && !field[i][z].equals("-")) counterO++;
+                if (field[i][z].equals("0") && !field[i][z].equals("-")) counterO++;
             }
             if (counterX == 3) {
                 winner = "X";
                 return "X";
             } else if (counterO == 3) {
-                winner = "O";
-                return "O";
+                winner = "0";
+                return "0";
             }
             counterX = 0;
             counterO = 0;
@@ -73,14 +73,14 @@ public class TicTacToe {
         for (int i = 0; i < field.length; i++) {
             for (int z = 0; z < field[i].length; z++) {
                 if (field[z][i].equals("X") && !field[z][i].equals("-")) counterX++;
-                if (field[z][i].equals("O") && !field[z][i].equals("-")) counterO++;
+                if (field[z][i].equals("0") && !field[z][i].equals("-")) counterO++;
             }
             if (counterX == 3) {
                 winner = "X";
                 return "X";
             } else if (counterO == 3) {
-                winner = "O";
-                return "O";
+                winner = "0";
+                return "0";
             }
             counterX = 0;
             counterO = 0;
@@ -91,14 +91,14 @@ public class TicTacToe {
 
         for (int i = 0; i < 3; i++) {
             if (diagonal[i].equals("X") && !diagonal[i].equals("-")) counterX++;
-            if (diagonal[i].equals("O") && !diagonal[i].equals("-")) counterO++;
+            if (diagonal[i].equals("0") && !diagonal[i].equals("-")) counterO++;
         }
         if (counterX == 3) {
             winner = "X";
             return "X";
         } else if (counterO == 3) {
-            winner = "O";
-            return "O";
+            winner = "0";
+            return "0";
         }
 
         counterX = 0;
@@ -106,14 +106,14 @@ public class TicTacToe {
 
         for (int i = 0; i < 3; i++) {
             if (diagonal2[i].equals("X") && !diagonal2[i].equals("-")) counterX++;
-            if (diagonal2[i].equals("O") && !diagonal2[i].equals("-")) counterO++;
+            if (diagonal2[i].equals("0") && !diagonal2[i].equals("-")) counterO++;
         }
         if (counterX == 3) {
             winner = "X";
             return "X";
         } else if (counterO == 3) {
-            winner = "O";
-            return "O";
+            winner = "0";
+            return "0";
         }
 
         for (int i = 0; i < field.length; i++) {
@@ -121,7 +121,6 @@ public class TicTacToe {
                 if (field[i][z].equals("-")) return null;
             }
         }
-
         return "D";
     }
 }
