@@ -16,6 +16,7 @@ public class SeaBord {
             field[x][y] = "x";
             fillWithMisses(x, y);
         }
+        int o=1;
     }
     void fillWithMisses(int x, int y){
         int i = x;
