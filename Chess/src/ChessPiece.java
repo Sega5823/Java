@@ -9,14 +9,4 @@ public abstract class ChessPiece {
     public abstract String getColor();
     public abstract boolean canMoveToPosition(ChessBoard chessBoard, int line, int column, int toLine, int toColumn);
     public abstract String getSymbol();
-
-    protected boolean checkPos(int pos) { return  pos >= 0 && pos <=7; }
-    // move 1 3 3 3
-
-    protected int getMax(int a, int b){ return Math.max(a,b);}
-
-    protected int getMin(int a, int b){ return Math.min(a,b);}
-
-
-
 }
