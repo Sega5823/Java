@@ -1,5 +1,3 @@
-import com.sun.tools.javac.Main;
-
 public class Pawn extends ChessPiece {
 
     public Pawn(String color) {

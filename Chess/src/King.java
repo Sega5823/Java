@@ -13,6 +13,7 @@ public class King extends ChessPiece {
     public boolean canMoveToPosition(ChessBoard chessBoard, int line, int column, int toLine, int toColumn) {
         if (isOutOfBounds(toLine, toColumn)) return false;
         if (line == toLine && column == toColumn) return false;
+        if (this.isUnderAttack(chessBoard, toLine, toColumn)) return false;
 
         if (line == toLine && column + 1 == toColumn) return true;
         if (line == toLine && column - 1 == toColumn) return true;
@@ -39,8 +40,10 @@ public class King extends ChessPiece {
     public boolean isUnderAttack(ChessBoard board, int line, int column) {
         for (int i = 0; i < board.board.length; i++) {
             for (int z = 0; z < board.board[i].length; z++) {
-                if (!board.board[i][z].getColor().equals(this.getColor())) {
-                    if (board.board[i][z].canMoveToPosition(board, i, z, line, column)) return true;
+                if (board.board[i][z] != null){
+                    if (!board.board[i][z].getColor().equals(this.getColor()) &&
+                        board.board[i][z].canMoveToPosition(board, i, z, line, column)) return true;
+
                 }
             }
         }
